@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=employees[0].name%></title>
+    <link rel="stylesheet" href="../css/styles.css" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li>Name: <%=employees[0].name%> <a href="/employees/"><img src="/images/edit.png" alt="edit-image"></a></li>
+            <li>Position: <%=employees[0].position%> <a href="/employees/"><img src="/images/edit.png" alt="edit-image"></a></li>
+            <li>Start Date: <%=employees[0].dateofstart%> <a href="/employees/"><img src="/images/edit.png" alt="edit-image"></a></li>
+            <li>Mobile Number: <%=employees[0].mobile%> <a href="/employees/"><img src="/images/edit.png" alt="edit-image"></a></li>
+            <li>Agreed Hours: <%=employees[0].agreedhours%> hour(s) <a href="/employees/"><img src="/images/edit.png" alt="edit-image"></a></li>
+            <li>Email: <%=employees[0].email%> <a href="/employees/"><img src="/images/edit.png" alt="edit-image"></a></li>
+        </ul>
+        <a href="/employees/delete/<%= employees[0]._id %>"><h3 id="delete">Delete User</h3></a>
+    </div>
+    
+</body>
+</html>

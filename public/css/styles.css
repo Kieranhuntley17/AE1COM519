@@ -1,0 +1,51 @@
+body {
+  background-color: rgb(86, 79, 79);
+}
+
+ul li {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+table {
+  border:1px solid black;
+  width: 100%;
+}
+
+th {
+  border:1px solid black;
+  text-decoration: underline;
+}
+
+td {
+  border:1px solid black;
+}
+
+a:link {
+  text-decoration: none!important;
+  color: #ff0;
+}
+
+a:visited {
+  text-decoration: none!important;
+  color: #ff0;
+}
+
+.container {
+    border: 10px ridge #ff0;
+    background-color: rgb(110, 38, 38);
+    padding: 0.5rem;
+    display: inline-block;
+    font: small-caps bold 1.2rem sans-serif;
+    text-align: center;
+    width: 100%;
+}
+
+#delete{
+  padding-top: 50px;
+  display: inline-block;
+}
+
+form {
+  padding-top: 5px;
+}
