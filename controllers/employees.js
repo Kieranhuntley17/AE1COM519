@@ -41,6 +41,112 @@ exports.delete = async (req, res) => {
   }
 };
 
+//edit name
+exports.editname = async (req, res) => {
+  const id = req.params.id;
+  const employees = await Employees.find({_id : id});
+
+  try {
+    console.log(employees)
+    console.log(req.body.editname)
+    await Employees.updateOne({ _id : employees }, { name : req.body.editname });
+    res.redirect(`/employees/${id}`);
+    console.log("name updated");
+  } 
+  catch (e) {
+    console.log(e);
+    res.status(404).send({
+      message: `could not find employee.`,
+    });
+  }
+};
+////////////////////////////////////////////////////////////////////////////////////
+
+//edit position
+exports.editposition = async (req, res) => {
+  const id = req.params.id;
+  const employees = await Employees.find({_id : id});
+
+  try {
+    console.log(employees)
+    console.log(req.body.editname)
+    await Employees.updateOne({ _id : employees }, { position : req.body.editposition });
+    res.redirect(`/employees/${id}`);
+    console.log("position updated");
+  } 
+  catch (e) {
+    console.log(e);
+    res.status(404).send({
+      message: `could not find employee.`,
+    });
+  }
+};
+////////////////////////////////////////////////////////////////////////////////////
+
+//edit Mobile
+exports.editmobile = async (req, res) => {
+  const id = req.params.id;
+  const employees = await Employees.find({_id : id});
+
+  try {
+    console.log(employees)
+    console.log(req.body.editmobile)
+    await Employees.updateOne({ _id : employees }, { mobile : req.body.editmobile });
+    res.redirect(`/employees/${id}`);
+    console.log("mobile updated");
+  } 
+  catch (e) {
+    console.log(e);
+    res.status(404).send({
+      message: `could not find employee.`,
+    });
+  }
+};
+////////////////////////////////////////////////////////////////////////////////////
+
+//edit Hours
+exports.edithours = async (req, res) => {
+  const id = req.params.id;
+  const employees = await Employees.find({_id : id});
+
+  try {
+    console.log(employees)
+    console.log(req.body.edithours)
+    await Employees.updateOne({ _id : employees }, { agreedhours : req.body.edithours });
+    res.redirect(`/employees/${id}`);
+    console.log("hours updated");
+  } 
+  catch (e) {
+    console.log(e);
+    res.status(404).send({
+      message: `could not find employee.`,
+    });
+  }
+};
+////////////////////////////////////////////////////////////////////////////////////
+
+//edit email
+exports.editemail = async (req, res) => {
+  const id = req.params.id;
+  const employees = await Employees.find({_id : id});
+
+  try {
+    console.log(employees)
+    console.log(req.body.editemail)
+    await Employees.updateOne({ _id : employees }, { email : req.body.editemail });
+    res.redirect(`/employees/${id}`);
+    console.log("email updated");
+  } 
+  catch (e) {
+    console.log(e);
+    res.status(404).send({
+      message: `could not find employee.`,
+    });
+  }
+};
+////////////////////////////////////////////////////////////////////////////////////
+
+
 exports.create = async (req, res) => {
   let createEmployee = new Employees({name:req.body.name});
   try {
@@ -57,3 +163,4 @@ exports.create = async (req, res) => {
     });
   }
 };
+

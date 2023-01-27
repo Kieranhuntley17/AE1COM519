@@ -31,6 +31,14 @@ app.get("/employees/delete/:id", employeeController.delete);
 
 app.post("/create-employee", employeeController.create);
 
+//Edits Below
+app.post("/employees/editname/:id", employeeController.editname);
+app.post("/employees/editposition/:id", employeeController.editposition);
+app.post("/employees/editmobile/:id", employeeController.editmobile);
+app.post("/employees/edithours/:id", employeeController.edithours);
+app.post("/employees/editemail/:id", employeeController.editemail);
+
+
 /*app.get("/employees/:id", (req, res) => {
   res.render("individual");
 });

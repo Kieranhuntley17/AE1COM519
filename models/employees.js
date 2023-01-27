@@ -5,8 +5,8 @@ const employeeSchema = new Schema(
   {
     name: {type: String, minlength: [2, "Name Too Short (2 chars min)"], required: [true, "Name Required"]},
     position: {type: String, default: "crew member"},
-    dateofstart: String,
-    agreedhours: Number,
+    dateofstart: {type: String, default: "00/00/00"},
+    agreedhours: {type: Number, default: 0},
     mobile: Number,
     email: String
   },

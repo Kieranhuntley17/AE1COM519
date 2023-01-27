@@ -5,6 +5,8 @@ body {
 ul li {
   text-decoration: none;
   list-style-type: none;
+  display: inline;
+  border-bottom: 1px solid #ff0;
 }
 
 table {
@@ -35,7 +37,6 @@ a:visited {
     border: 10px ridge #ff0;
     background-color: rgb(110, 38, 38);
     padding: 0.5rem;
-    display: inline-block;
     font: small-caps bold 1.2rem sans-serif;
     text-align: center;
     width: 100%;
